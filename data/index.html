@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+		/>
+		<link
+			rel="shortcut icon"
+			href="assets/img/favicon-32x32.png"
+			type="image/x-icon"
+		/>
+		<title>Tetris</title>
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/css/formulario.css" />
+		<link rel="stylesheet" href="assets/css/Digital%20Numbers%20Regular.css" />
+		<link rel="stylesheet" href="assets/css/blockrain.css" />
+		<link rel="stylesheet" href="assets/css/styles.css" />
+
+		<script src="https://cdn.jsdelivr.net/npm/appwrite@5.0.0"></script>
+	</head>
+
+	<body>
+		<div
+			class="
+				d-flex
+				flex-column
+				justify-content-center
+				align-items-center
+				principal
+				position-absolute
+				w-100
+			"
+			id="login"
+		>
+			<img class="logo" src="assets/img/logo.png" style="width: 300px" />
+			<h1 class="titulo" hidden></h1>
+			<form autocomplete="off" class="form" id="formulario">
+				<div class="control block-cube block-input">
+					<input id="correo" name="username" placeholder="Email" type="text" />
+					<div class="bg-top">
+						<div class="bg-inner"></div>
+					</div>
+					<div class="bg-right">
+						<div class="bg-inner"></div>
+					</div>
+					<div class="bg">
+						<div class="bg-inner"></div>
+					</div>
+				</div>
+				<div class="control block-cube block-input">
+					<input
+						id="password"
+						name="password"
+						placeholder="Contraseña"
+						type="password"
+					/>
+					<div class="bg-top">
+						<div class="bg-inner"></div>
+					</div>
+					<div class="bg-right">
+						<div class="bg-inner"></div>
+					</div>
+					<div class="bg">
+						<div class="bg-inner"></div>
+					</div>
+				</div>
+				<button
+					id="initSessionButton"
+					class="btn block-cube block-cube-hover"
+					type="submit"
+				>
+					<div class="bg-top">
+						<div class="bg-inner"></div>
+					</div>
+					<div class="bg-right">
+						<div class="bg-inner"></div>
+					</div>
+					<div class="bg">
+						<div class="bg-inner"></div>
+					</div>
+					<div id="initSession" class="text">Iniciar Sesion</div>
+					<div
+						id="spinner"
+						class="invisible position-absolute top-50 start-50 translate-middle"
+					>
+						<span
+							class="spinner-border text-warning"
+							style="width: 1.5rem; height: 1.5rem"
+						></span>
+					</div>
+				</button>
+			</form>
+		</div>
+
+		<div
+			class="
+				invisible
+				d-flex
+				justify-content-center
+				align-items-center
+				principal
+				position-absolute
+				w-100
+			"
+			id="pantallaJuego"
+		>
+			<div class="text-center columaIzquierda">
+				<div
+					class="fila"
+					style="
+						font-family: 'Digital Numbers Regular';
+						color: rgb(255, 255, 255);
+						padding-top: 12px;
+						padding-bottom: 12px;
+						border-style: solid;
+						border-color: #6c757d;
+					"
+				>
+					<h6 class="datos" style="margin: 0; font-size: 10px !important">
+						Ranking
+
+						<div id="rankingContent"></div>
+					</h6>
+				</div>
+			</div>
+			<div class="text-center columaCentral">
+				<img class="logoTetris" src="assets/img/TetrisLogo2_.png" />
+				<div class="juego"></div>
+			</div>
+			<div class="columaDerecha">
+				<h6 class="datos" style="margin-bottom: 16px">
+					Jugador:&nbsp;<span id="jugador" style="color: #00ff19">Nombre</span>
+				</h6>
+				<h6 class="datos" style="margin-bottom: 16px">
+					Record:&nbsp;<span id="record" style="color: #00ff19">0</span>
+				</h6>
+				<h6 class="datos" style="margin-bottom: 16px">
+					Posicion:&nbsp;<span id="posicion" style="color: #00ff19">0</span>
+				</h6>
+				<h6 class="datos">
+					Puntuacion:&nbsp;<span id="puntuacion" style="color: #00ff19">0</span>
+				</h6>
+			</div>
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="assets/js/blockrain.jquery.js"></script>
+		<script src="assets/js/funciones.js"></script>
+		<script src="assets/js/app.js"></script>
+		<script src="assets/js/index.js"></script>
+		<!--<script src="assets/js/script.js"></script>-->
+	</body>
+</html>
